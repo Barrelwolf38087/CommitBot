@@ -1,0 +1,26 @@
+{
+  "name": "testthing",
+  "version": "1.0.0",
+  "description": "Discord bot for getting commit messages from What the Commit. Place your token in \"token.txt\".",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "libsodium-wrappers": "^0.7.4",
+    "uws": "^100.0.1",
+    "what-the-commit": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
