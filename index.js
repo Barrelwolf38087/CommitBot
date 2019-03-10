@@ -4,7 +4,6 @@ const getToken = require('./getToken')
 
 const client = new discord.Client()
 
-// client.on('warn', (warn) => console.log(`Warning: ${warn}`))
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`)
 })
@@ -17,10 +16,6 @@ client.on('message', (message) => {
 
 function login () {
   client.login(getToken())
-    .then(() => {
-      client.on('disconnect', reconnect)
-      client.on('error', reconnect)
-    })
     .catch(err => {
       if (err.toString().includes('invalid token') || err.toString().includes('Incorrect login')) {
         console.error(`Error: Token ${getToken()} rejected by Discord!`)
@@ -29,6 +24,10 @@ function login () {
         console.error("Couldn't connect to Discord! Trying again...")
         login()
       }
+    })
+    .then(() => {
+      client.on('disconnect', reconnect)
+      client.on('error', reconnect)
     })
 }
 

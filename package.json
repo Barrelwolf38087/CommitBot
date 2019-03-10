@@ -1,5 +1,5 @@
 {
-  "name": "testthing",
+  "name": "commitbot",
   "version": "1.0.0",
   "description": "Discord bot for getting commit messages from What the Commit. Place your token in \"token.txt\".",
   "main": "index.js",
